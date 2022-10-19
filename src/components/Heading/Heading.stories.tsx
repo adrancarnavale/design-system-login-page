@@ -1,18 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Text, ITextProps } from './Text';
+import { Heading, IHeadingProps } from './Heading';
 
 export default {
-  title: 'Components/Text',
-  component: Text,
+  title: 'Components/Heading',
+  component: Heading,
   args: {
     children: 'Lorem ipsum.',
     className: '',
     size: 'md',
     asChild: false,
   },
-} as Meta<ITextProps>;
+} as Meta<IHeadingProps>;
 
-export const Default: StoryObj<ITextProps> = {
+export const Default: StoryObj<IHeadingProps> = {
   argTypes: {
     children: {
       table: {
@@ -32,10 +32,10 @@ export const Default: StoryObj<ITextProps> = {
   },
 };
 
-export const CustomComponent: StoryObj<ITextProps> = {
+export const CustomComponent: StoryObj<IHeadingProps> = {
   args: {
     asChild: true,
-    children: <p>Example of Text with Paragraph tag</p>,
+    children: <h3>Example of Heading with H3 tag</h3>,
   },
   argTypes: {
     children: {
